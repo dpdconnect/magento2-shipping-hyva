@@ -103,7 +103,7 @@ $checkoutConfig = $checkoutConfigViewModel->getConfig();
             handleButtonClick(event) {
                 const parcelShopId = document.querySelector('.parcelshopId');
 
-                if (!(parcelShopId) || !(parcelShopId.value)) {
+                if (parcelShopId && !(parcelShopId.value)) {
                     event.stopPropagation();
 
                     this.validationError = hyva.str('This is a required field.');
